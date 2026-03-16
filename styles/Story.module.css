@@ -1,0 +1,126 @@
+.page {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,248,245,0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 1.5rem;
+}
+
+.back {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+}
+.back:hover { opacity: 0.7; }
+
+/* Cover */
+.cover {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+@media (min-width: 768px) { .cover { height: 440px; } }
+
+.coverOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(255,248,245,0.6) 100%);
+}
+
+.coverPlaceholder {
+  width: 100%;
+  height: 160px;
+  background: #FFF0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+/* Article */
+.article {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+/* Header */
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  line-height: 1.25;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+.metaLine {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.metaDate {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+}
+.footer span { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+.footer p { font-style: italic; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+.backBtn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s;
+}
+.backBtn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
