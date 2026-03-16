@@ -25,7 +25,7 @@ export default function Home({ stories, error }) {
   return (
     <>
       <Head>
-        <title>Meu Abacate 🥑</title>
+        <title>Abacate 🥑</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -39,8 +39,9 @@ export default function Home({ stories, error }) {
           <div className={styles.heroOverlay} />
           <div className={styles.heroContent}>
             <p className={styles.heroGreeting}>para o meu</p>
-            <h1 className={styles.heroName}>Meu Bem 🥑</h1>
+            <h1 className={styles.heroName}>Amor🥑</h1>
             <div className={styles.daysBadge}>
+              <span className={styles.daysLabel}>Atualmente há</span>
               <span className={styles.daysNum}>{days}</span>
               <span className={styles.daysLabel}>dias juntos</span>
             </div>
